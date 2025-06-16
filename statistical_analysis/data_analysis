@@ -1,0 +1,121 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import numpy as np
+
+# --- Load and Preprocess Data ---
+
+# Load the CSV file
+data = pd.read_csv('/Users/xDAyN/Desktop/cs project/School Project/Dimuon_DoubleMu.csv')
+
+# Calculate overall charge of the two muons
+data['Q_total'] = data['Q1'] + data['Q2']
+
+# Keep only events with total charge zero
+data = data[data['Q_total'] == 0].reset_index(drop=True)
+
+print(f"Filtered data size: {len(data)} events with total charge zero")
+
+
+# Define label names for each class
+class_names = {
+    0: "J/ψ",
+    1: "ψ(2S)",
+    2: "ϒ(1S)",
+    3: "ϒ(2S)",
+    4: "ϒ(3S)",
+    5: "Z boson",
+    6: "Background"
+}
+
+# Classify particle by invariant mass range
+def classify_mass(mass):
+    if 3.0 <= mass <= 3.2:
+        return 0  # J/ψ
+    elif 3.6 <= mass <= 3.8:
+        return 1  # ψ(2S)
+    elif 9.3 <= mass <= 9.6:
+        return 2  # ϒ(1S)
+    elif 9.9 <= mass <= 10.1:
+        return 3  # ϒ(2S)
+    elif 10.3 <= mass <= 10.4:
+        return 4  # ϒ(3S)
+    elif 88 <= mass <= 94:
+        return 5  # Z boson
+    else:
+        return 6  # Background
+
+
+data['label'] = data['M'].apply(classify_mass)
+
+# --- 1. Scatter Plot of All Invariant Masses ---
+
+plt.figure(figsize=(12, 5))
+plt.plot(data['M'], '.', markersize=2)
+plt.xlabel('Event Index')
+plt.ylabel('Invariant Mass M')
+plt.title('All Invariant Mass Values')
+plt.ylim(0, 120)
+plt.grid(True)
+plt.show()
+
+# --- 2. Cumulative Count Per Class ---
+
+plt.figure(figsize=(12, 6))
+for class_id, name in class_names.items():
+    cumulative = []
+    count = 0
+    for val in data['label']:
+        if val == class_id:
+            count += 1
+        cumulative.append(count)
+    plt.plot(cumulative, label=name)
+
+plt.xlabel('Event Index')
+plt.ylabel('Cumulative Count')
+plt.title('Cumulative Counts per Class')
+plt.legend()
+plt.grid(True)
+plt.show()
+
+# --- 3. Histogram of Invariant Mass by Class ---
+
+plt.figure(figsize=(12, 6))
+colors = ['blue', 'green', 'red', 'purple', 'orange', 'violet', 'gray']
+
+# Plot histogram per class
+for class_id, color in zip(class_names.keys(), colors):
+    subset = data[data['label'] == class_id]['M']
+    plt.hist(subset, bins=np.linspace(0, 120, 241), alpha=0.5,
+             label=class_names[class_id], color=color)
+
+plt.xlabel('Invariant Mass M')
+plt.ylabel('Frequency')
+plt.title('Histogram of Invariant Mass by Class')
+plt.grid(True)
+plt.legend()
+
+# --- Annotate Important Peaks ---
+
+plt.text(3.1, 5000, ' J/ψ', color='black', fontsize=10)
+plt.text(3.7, 600, 'ψ(2S)', color='black', fontsize=10)
+plt.text(9.45, 2000, 'ϒ(1S)', color='black', fontsize=10)
+plt.text(91.0, 200, '   Z Boson', color='black', fontsize=10)
+
+plt.annotate(' ϒ(2S)',
+             xy=(10.0, 500),
+             xytext=(8.7, 1200),
+             arrowprops=dict(arrowstyle='->', color='purple'),
+             fontsize=10, color='black')
+
+plt.annotate('ϒ(3S)',
+             xy=(10.35, 150),
+             xytext=(11.5, 700),
+             arrowprops=dict(arrowstyle='->', color='orange'),
+             fontsize=10, color='black')
+
+plt.show()
+
+# --- 4. Print Label Distribution ---
+
+print("Label distribution:")
+print(data['label'].value_counts().sort_index().rename(index=class_names))
