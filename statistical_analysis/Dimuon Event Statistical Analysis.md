@@ -28,11 +28,11 @@ Events are labeled into one of **7 classes** based on the calculated invariant m
 
 | Label | Particle    | Mass Range (GeV) |
 |-------|-------------|------------------|
-| 0     | J/ψ         | 3.0 – 3.2        |
-| 1     | ψ(2S)       | 3.6 – 3.8        |
-| 2     | ϒ(1S)       | 9.3 – 9.6        |
-| 3     | ϒ(2S)       | 9.9 – 10.1       |
-| 4     | ϒ(3S)       | 10.3 – 10.4      |
+| 0     | J/ψ         | 3.05 – 3.15      |
+| 1     | ψ(2S)       | 3.65 – 3.72      |
+| 2     | ϒ(1S)       | 9.35 – 9.55      |
+| 3     | ϒ(2S)       | 9.88 – 10        |
+| 4     | ϒ(3S)       | 10.2 – 10.33     |
 | 5     | Z boson     | 88 – 94          |
 | 6     | Background  | Elsewhere        |
 
