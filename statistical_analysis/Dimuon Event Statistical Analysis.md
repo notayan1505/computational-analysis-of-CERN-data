@@ -85,21 +85,24 @@ Below is the distribution of labeled particle events in the educational dataset:
 
 ### 📉 How This Compares to Actual LHC Data
 
-In an **unfiltered CMS research dataset**, the relative frequencies of these particles would be **drastically different** due to both **physics cross-sections** and **detector acceptance limitations**:
+To understand how the educational dataset has been curated, we compare the observed event counts with expected counts in actual CMS Run 2011A data—assuming 100,000 randomly selected events from a general dimuon dataset.
 
-| Particle     | Realistic Event Rate (in typical CMS data) |
-|--------------|---------------------------------------------|
-| J/ψ          | High (~millions/year) – very common due to QCD production  
-| ψ(2S)        | Less than J/ψ (~10× less frequent)  
-| ϒ(1S), ϒ(2S), ϒ(3S) | Rare – produced much less often than charmonium states  
-| Z boson      | Very rare (~few per 100,000 events, depending on triggers)  
-| Background   | Vast majority of events (>99%) in wide-mass range analyses  
+| Label | Particle | Educational Dataset | Estimated in Real Data (per 100k events) | Difference (×) | Notes |
+|-------|----------|---------------------|------------------------------------------|----------------|-------|
+| 0     | J/ψ      | 7,198               | ~2,000                                    | 3.6× more      | Common resonance from QCD processes |
+| 1     | ψ(2S)    | 634                 | ~200                                      | 3.2× more      | Decays into J/ψ + pions or muons |
+| 2     | ϒ(1S)    | 3,462               | ~50                                       | 69× more       | Heavy bottomonium state, rare at 7 TeV |
+| 3     | ϒ(2S)    | 2,412               | ~25                                       | 96× more       | Rarer than ϒ(1S) |
+| 4     | ϒ(3S)    | 2,138               | ~15                                       | 142× more      | Extremely rare, harder to trigger |
+| 5     | Z boson  | 4,015               | ~10–50                                    | 80× more (avg) | Typically requires high-pT trigger |
+| 6     | Background | 80,141            | ~97,700                                   | 0.82× less     | Suppressed here to highlight signals |
 
-So in a **research-grade dataset**, the Z boson might account for **0.01–0.1%** of all events, while in this educational version it is **~4%** of the dataset. Similarly, ϒ mesons and ψ resonances have been enhanced by **orders of magnitude**.
+> 💡 **Educational Total:** 100,000 events  
+> 📉 **Realistic Estimate:** Based on published CMS production rates at √s = 7 TeV and typical selection criteria (triggered dimuons with |η| < 2.4 and pT thresholds).
 
 ---
 
-### 🎓 Why Are Signals So Visible Here?
+### 🎯 Key Takeaways
 
 This dataset was specifically curated for **educational use**, meaning:
 
