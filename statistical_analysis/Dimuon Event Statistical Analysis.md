@@ -25,7 +25,7 @@ The dataset was derived from the **CMS Run2011A DoubleMu primary dataset** and i
 - Muon pair must have **opposite charges**
 - Invariant mass is in the range **0.3 < M < 300 GeV**
 
-> ⚠️ **Note:** These data have been **filtered and enhanced** for educational use. The number of signal events (e.g., Z bosons, J/ψ, ϒ resonances) is **artificially increased** compared to actual collision data to make key physics features more visible and analyzable in a learning setting.  
+> ⚠️ **Note:** The data have been **filtered and enhanced** for educational use. The number of signal events (e.g., Z bosons, J/ψ, ϒ resonances) is **artificially increased** compared to actual collision data to make key physics features more visible and analyzable in a learning setting.  
 > They are **not suitable for full physics research** or publication but serve as a reliable foundation for computational analysis and machine learning training.
 
 ---
