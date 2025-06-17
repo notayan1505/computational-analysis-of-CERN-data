@@ -1,6 +1,6 @@
-# 💡 Dimuon Event Computational Analysis - Statistical Analysis
+# 💡 Two Muon Event Computational Analysis - Statistical Analysis
 
-This project analyzes real high-energy physics data from dimuon collision events, focusing on identifying and visualizing the presence of fundamental particles such as **J/ψ**, **ψ(2S)**, **ϒ(nS)** states, and the **Z boson**. These particles decay into muons, and using the muon kinematic data, we classify the originating particles by their invariant mass, taking into account realistic uncertainty ranges around nominal particle masses. Using Python, we label particle signatures dynamically based on mass windows defined by combined physics and detector uncertainties, and visualize their distributions through detailed statistical and graphical analysis. This covers the statistical analysis of the project, giving an insight into the data we are working with.
+This project analyzes real high-energy physics data from two muon collision events, focusing on identifying and visualizing the presence of fundamental particles such as **J/ψ**, **ψ(2S)**, **ϒ(nS)** states, and the **Z boson**. These particles decay into muons, and using the muon kinematic data, we classify the originating particles by their invariant mass, taking into account realistic uncertainty ranges around nominal particle masses. Using Python, we label particle signatures dynamically based on mass windows defined by combined physics and detector uncertainties, and visualize their distributions through detailed statistical and graphical analysis. This covers the statistical analysis of the project, giving an insight into the data we are working with.
 
 ---
 
