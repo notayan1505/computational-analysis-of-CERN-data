@@ -34,7 +34,7 @@ Events are labeled into one of **7 classes** based on their invariant mass falli
 | 2     | ϒ(1S)       | 9.45               | ~2%                              |
 | 3     | ϒ(2S)       | 9.94               | ~2%                              |
 | 4     | ϒ(3S)       | 10.27              | ~2%                              |
-| 5     | Z boson     | 91.19              | ~4% (physics + detector combined)|
+| 5     | Z boson     | 91.19              | ~4%                              |
 | 6     | Background  | Elsewhere          | N/A                              |
 
 ---
