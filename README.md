@@ -19,7 +19,7 @@ This project explores particle physics using real data from the **Compact Muon S
 └── Proton-Proton Collisions and Computational Analysis of CERN (CMS) DATA.pdf # Full project writeup
 
 
-## 🧠 Concepts Covered
+## Concepts Covered
 
 - The Standard Model of Particle Physics
 - Quarks, Gluons, Bosons & Fundamental Forces
@@ -29,14 +29,14 @@ This project explores particle physics using real data from the **Compact Muon S
 - Monte Carlo Simulations
 - Machine Learning Classification (PyTorch)
 
-## 🧪 Dataset Used
+## Dataset Used
 
 **Source:** CERN Open Data Portal  
 **Dataset:** [DoubleMu 2011A](https://opendata.cern.ch/record/5201)  
 **Size:** ~100,000 events  
 **Description:** Each event includes two detected muons. While not all events correspond to meaningful particle decays, the dataset is enhanced to make Z boson decays more observable for educational purposes.
 
-## 🔬 Physics Goals
+## Physics Goals
 
 - Understand proton-proton collisions at the LHC
 - Identify events indicative of **Z boson** decay into muon pairs
@@ -46,7 +46,7 @@ This project explores particle physics using real data from the **Compact Muon S
   - Lorentzian (for natural decay width)
   - Voigt Profile (convolution of the above two)
 
-## 📈 Data Analysis Pipeline
+## Data Analysis Pipeline
 
 ### 1. Event Filtering
 - Two muons of opposite charge
@@ -71,7 +71,7 @@ This project explores particle physics using real data from the **Compact Muon S
 - Generate Z boson events from Voigt distribution
 - Compare simulated and ideal decay characteristics
 
-## 🤖 Machine Learning
+## Machine Learning
 
 ### Objective
 Train a PyTorch model to classify events by decay type or background.
@@ -96,7 +96,7 @@ Train a PyTorch model to classify events by decay type or background.
     ...
 )
 
-## ✅ Result
+## Result
 
 - **Accuracy:** ~73%
 - **Z Boson Detection:** No false negatives for Z boson class
@@ -104,7 +104,7 @@ Train a PyTorch model to classify events by decay type or background.
 
 ---
 
-## 📊 Sample Results
+## Sample Results
 
 - ~3000 Z boson candidate events after filtering
 - **Mean invariant mass (Gaussian fit):** 90.889 GeV (vs expected 91.2 GeV)
@@ -113,13 +113,13 @@ Train a PyTorch model to classify events by decay type or background.
 
 ---
 
-## 🏁 Conclusion
+## Conclusion
 
 This was a personal, curiosity-driven project combining particle physics, data science, and machine learning. While not perfect, it successfully models Z boson production and explores the use of deep learning on real CERN data.
 
 ---
 
-## 👤 Author
+## Author
 
 **Ayan Gupta**  
 Final-year high school student interested in engineering and machine learning.
